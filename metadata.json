@@ -1,0 +1,6 @@
+{
+  "name": "Beauty By PND",
+  "description": "Boutique e-commerce de luxe - Parfums, Cosmétiques, Mode et Sourcing personnalisé",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

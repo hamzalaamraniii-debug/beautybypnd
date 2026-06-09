@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Alex+Brush&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-logo-var: "Cinzel", "Playfair Display", Georgia, serif;
+  --font-serif-var: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+
+  --clr-gold-50: #fff5f6;
+  --clr-gold-100: #ffe4e6;
+  --clr-gold-200: #fecdd3;
+  --clr-gold-300: #e5a93b; /* Premium Golden Champagne */
+  --clr-gold-400: #c98e26;
+  --clr-gold-500: #c5a880; /* Satin Gold */
+  --clr-gold-600: #aa7d33;
+  --clr-gold-700: #7c5820;
+  
+  --clr-rose-50: #fff9fa;   /* Warm Pearl Blush Cream */
+  --clr-rose-100: #ffe8ec;  /* Sweet Pink Rose milk */
+  --clr-rose-200: #fcccd6;  /* Soft Girly Pink highlight */
+  --clr-rose-300: #f472b6;  /* Beautiful Rose Quartz */
+  --clr-rose-400: #e14e7a;  /* Classy bright Parisian Rose */
+  --clr-rose-500: #be123c;  /* Majestic Velvet Cherry Rose (primary button/title) */
+  --clr-rose-600: #9f1239;  /* Elite Crimson Gold-matching Burgundy */
+  --clr-rose-700: #881337;  /* Deep Blackberry */
+
+  --clr-rose-pnd-50: #fff9fa;
+  --clr-rose-pnd-100: #ffe8ec;
+  --clr-rose-pnd-200: #fcccd6;
+  --clr-rose-pnd-300: #f472b6;
+  --clr-rose-pnd-400: #e14e7a;
+  --clr-rose-pnd-500: #be123c;
+  --clr-rose-pnd-600: #9f1239;
+  --clr-rose-pnd-700: #881337;
+
+  --glow-gradient: linear-gradient(135deg, #fbcfe8 0%, #be123c 50%, #e5a93b 100%);
+  --rose-gold-gradient-bg: linear-gradient(135deg, #ffffff 0%, #fff9fa 50%, #ffe8ec 100%);
+  --text-gold-gradient-bg: linear-gradient(135deg, #be123c 0%, #e5a93b 50%, #be123c 100%);
+}
+
+@theme {
+  --font-logo: var(--font-logo-var);
+  --font-serif: var(--font-serif-var);
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-gold-50: var(--clr-gold-50);
+  --color-gold-100: var(--clr-gold-100);
+  --color-gold-200: var(--clr-gold-200);
+  --color-gold-300: var(--clr-gold-300);
+  --color-gold-400: var(--clr-gold-400);
+  --color-gold-500: var(--clr-gold-500);
+  --color-gold-600: var(--clr-gold-600);
+  --color-gold-700: var(--clr-gold-700);
+  
+  --color-rose-50: var(--clr-rose-50);
+  --color-rose-100: var(--clr-rose-100);
+  --color-rose-200: var(--clr-rose-200);
+  --color-rose-300: var(--clr-rose-300);
+  --color-rose-400: var(--clr-rose-400);
+  --color-rose-500: var(--clr-rose-500);
+  --color-rose-600: var(--clr-rose-600);
+  --color-rose-700: var(--clr-rose-700);
+
+  --color-rose-pnd-50: var(--clr-rose-pnd-50);
+  --color-rose-pnd-100: var(--clr-rose-pnd-100);
+  --color-rose-pnd-200: var(--clr-rose-pnd-200);
+  --color-rose-pnd-300: var(--clr-rose-pnd-300);
+  --color-rose-pnd-400: var(--clr-rose-pnd-400);
+  --color-rose-pnd-500: var(--clr-rose-pnd-500);
+  --color-rose-pnd-600: var(--clr-rose-pnd-600);
+  --color-rose-pnd-700: var(--clr-rose-pnd-700);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--clr-rose-50);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--clr-rose-200);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-rose-400);
+}
+
+/* Pulsing effect for main elements */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, var(--clr-rose-50) 25%, var(--clr-rose-100) 50%, var(--clr-rose-50) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+html, body {
+  background-color: #ffffff; /* Luxury pure white background */
+  color: #1f2937; /* Clean readable dark text */
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+/* Elegant luxury gradients */
+.gold-gradient-bg {
+  background: var(--glow-gradient);
+}
+
+.rose-gold-gradient {
+  background: var(--rose-gold-gradient-bg);
+}
+
+.soft-pink-bg {
+  background-color: var(--clr-rose-50);
+}
+
+.text-gold-gradient {
+  background: var(--text-gold-gradient-bg);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
